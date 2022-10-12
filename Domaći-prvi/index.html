@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div 
+    style="text-align: center; background-color: #333; height: 60vh;">
+        <div>
+          <img
+            id="pokemon-img"
+            src="pokemon-slike/unnamed.png"
+            alt=""
+            width="400px"
+          />
+        </div>
+    </div>
+        <div style="text-align: center; background-color: #333; height: 20vh;">
+        <button id="button1">Jolteon</button>
+        <button id="button2">Lapras</button>
+        <button id="button3">Rapidash</button>
+        <button id="button4">Mew</button>
+        <button id="button5">Umbreon</button>
+      </div>
+      <div style="text-align: center; background-color: #333; height: 20vh;">
+      <button id="button6">Poke ball</button>
+      </div>
+  
+
+<script>
+
+      document
+        .getElementById("button1")
+        .addEventListener("click", function () {
+          document.getElementById("pokemon-img").src =
+            "pokemon-slike/135.png";
+        });
+
+      document
+        .getElementById("button2")
+        .addEventListener("click", function () {
+          document.getElementById("pokemon-img").src =
+            "pokemon-slike/131.png";
+        });
+
+        document
+        .getElementById("button3")
+        .addEventListener("click", function () {
+          document.getElementById("pokemon-img").src =
+            "pokemon-slike/078.png";
+        });
+
+        document
+        .getElementById("button4")
+        .addEventListener("click", function () {
+          document.getElementById("pokemon-img").src =
+            "pokemon-slike/151.png";
+        });
+
+        document
+        .getElementById("button5")
+        .addEventListener("click", function () {
+          document.getElementById("pokemon-img").src =
+            "pokemon-slike/197.png";
+        });
+
+        document
+        .getElementById("button6")
+        .addEventListener("click", function () {
+          document.getElementById("pokemon-img").src =
+            "pokemon-slike/unnamed.png";
+        });
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#pokemon-img {
+    padding-top: 120px;
+}
+
+#button1 {
+    background-color: #ffcb08;
+    border: 3px solid #2f69b2;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+#button1:hover {
+    color: white;
+}
+
+#button2 {
+    background-color: #ffcb08;
+    border: 3px solid #2f69b2;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 20px;
+
+}
+
+#button2:hover {
+    color: white;
+}
+
+#button3 {
+    background-color: #ffcb08;
+    border: 3px solid #2f69b2;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 20px;
+
+}
+
+#button3:hover {
+    color: white;
+}
+
+#button4 {
+    background-color: #ffcb08;
+    border: 3px solid #2f69b2;
+    padding: 5px 27px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 20px;
+
+}
+
+#button4:hover {
+    color: white;
+}
+
+#button5 {
+    background-color: #ffcb08;
+    border: 3px solid #2f69b2;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 20px;
+
+}
+
+#button5:hover {
+    color: white;
+}
+
+#button6 {
+    background-color: #ffcb08;
+    border: 3px solid #2f69b2;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#button6:hover {
+    color: white;
+}
