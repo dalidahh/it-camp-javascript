@@ -1,218 +1,138 @@
 var finalValue; // Rezultat
 // finalValue === undefined
-var currentValue = 0; // Broj s kojim ćemo da radimo (sabiranje, množenje itd.)
+var currentValue = 0; // Broj koji je trenutni broj kojeg unosimo na digitronu
 var op = ""; // Operacija koju smo izabrali
 
-document.getElementById("one").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 1;
+function showCurrentValues() {
+  console.log("------------------------");
   console.log("finalValue", finalValue);
   console.log("currentValue", currentValue);
   console.log("op", op);
+}
+
+function onNumberClickHandler(number) {
+  currentValue = currentValue * 10 + number;
   document.getElementById("result").textContent = currentValue;
+  showCurrentValues();
+}
+
+function onOperationSelectHandler(selectedOp) {
+  switch (op) {
+    case "":
+      finalValue = currentValue;
+      break;
+    case "+":
+      finalValue = finalValue + currentValue;
+      break;
+    case "-":
+      finalValue = finalValue - currentValue;
+      break;
+    case "*":
+      finalValue = finalValue * currentValue;
+      break;
+    case "/":
+      finalValue = finalValue / currentValue;
+      break;
+    default:
+      break;
+  }
+
+  op = selectedOp;
+  currentValue = 0;
+  document.getElementById("result").textContent = "";
+}
+
+document.getElementById("one").addEventListener("click", function () {
+  onNumberClickHandler(1);
 });
 
 document.getElementById("two").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 2;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(2);
 });
 
 document.getElementById("three").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 3;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(3);
 });
 
 document.getElementById("four").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 4;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(4);
 });
 
 document.getElementById("five").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 5;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(5);
 });
 
 document.getElementById("six").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 6;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(6);
 });
 
 document.getElementById("seven").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 7;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(7);
 });
 
 document.getElementById("eight").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 8;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(8);
 });
 
 document.getElementById("nine").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 9;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(9);
 });
 
 document.getElementById("zero").addEventListener("click", function () {
-  currentValue = currentValue * 10 + 0;
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
-  console.log("op", op);
-  document.getElementById("result").textContent = currentValue;
+  onNumberClickHandler(0);
 });
 
 document.getElementById("delete").addEventListener("click", function () {
-  document.getElementById("result").textContent = "0";
+  document.getElementById("result").textContent = "";
 
-  // NAŠE POČETNE VRIJEDNOSTI
+  // NASE POCETNE VREDNOSTI
   currentValue = 0;
   finalValue = undefined;
   op = "";
 });
- 
-    // EQUAL
+
 document.getElementById("equal").addEventListener("click", function () {
-  if (op === "") {
-    finalValue = currentValue;
-  } else if (op === "+") {
-    finalValue = finalValue + currentValue;
-  } else if (op === "-") {
-    finalValue = finalValue - currentValue;
-  } else if (op === "*") {
-    finalValue = finalValue * currentValue;
-  } else if (op === "/") {
-    finalValue = finalValue / currentValue;
+  switch (op) {
+    case "":
+      finalValue = currentValue;
+      break;
+    case "+":
+      finalValue = finalValue + currentValue;
+      break;
+    case "-":
+      finalValue = finalValue - currentValue;
+      break;
+    case "*":
+      finalValue = finalValue * currentValue;
+      break;
+    case "/":
+      finalValue = finalValue / currentValue;
+      break;
+    default:
+      break;
   }
 
-  console.log("op", op);
-  console.log("finalValue on EQUAL", finalValue);
+  // ispisivanje rezultati
   document.getElementById("result").textContent = finalValue;
 
-  //
-  console.log("==== Vraćamo varijable na početne vrijednosti ====");
+  // vracanje na pocetne vrednosti
   op = "";
-  console.log("inital op", op);
   currentValue = 0;
   finalValue = undefined;
-  console.log("inital finalValue", finalValue);
-  console.log("initial currentValue", currentValue);
 });
 
-    //SABIRANJE
 document.getElementById("plus").addEventListener("click", function () {
-  if (op === "") {
-    finalValue = currentValue;
-  } else if (op === "+") {
-    finalValue = finalValue + currentValue;
-  } else if (op === "-") {
-    finalValue = finalValue - currentValue;
-  } else if (op === "*") {
-    finalValue = finalValue * currentValue;
-  } else if (op === "/") {
-    finalValue = finalValue / currentValue;
-  }
-
-  console.log("op", op);
-  op = "+";
-  console.log("new OP", op);
-  currentValue = 0;
-  document.getElementById("result").textContent = "";
-
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
+  onOperationSelectHandler("+");
 });
 
-    //ODUZIMANJE
 document.getElementById("minus").addEventListener("click", function () {
-  if (op === "") {
-    finalValue = currentValue;
-  } else if (op === "+") {
-    finalValue = finalValue + currentValue;
-  } else if (op === "-") {
-    finalValue = finalValue - currentValue;
-  } else if (op === "*") {
-    finalValue = finalValue * currentValue;
-  } else if (op === "/") {
-    finalValue = finalValue / currentValue;
-  }
-
-  console.log("op", op);
-  op = "-";
-  console.log("new OP", op);
-  currentValue = 0;
-  document.getElementById("result").textContent = "";
-
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
+  onOperationSelectHandler("-");
 });
 
-    //MNOŽENJE
 document.getElementById("times").addEventListener("click", function () {
-  if (op === "") {
-    finalValue = currentValue;
-  } else if (op === "+") {
-    finalValue = finalValue + currentValue;
-  } else if (op === "-") {
-    finalValue = finalValue - currentValue;
-  } else if (op === "*") {
-    finalValue = finalValue * currentValue;
-  } else if (op === "/") {
-    finalValue = finalValue / currentValue;
-  }
-
-  console.log("op", op);
-  op = "*";
-  console.log("new OP", op);
-  currentValue = 0;
-  document.getElementById("result").textContent = "";
-
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
+  onOperationSelectHandler("*");
 });
 
-    //DELJENJE
 document.getElementById("divide").addEventListener("click", function () {
-  if (op === "") {
-    finalValue = currentValue;
-  } else if (op === "+") {
-    finalValue = finalValue + currentValue;
-  } else if (op === "-") {
-    finalValue = finalValue - currentValue;
-  } else if (op === "*") {
-    finalValue = finalValue * currentValue;
-  } else if (op === "/") {
-    finalValue = finalValue / currentValue;
-  }
-
-  console.log("op", op);
-  op = "/";
-  console.log("new OP", op);
-  currentValue = 0;
-  document.getElementById("result").textContent = "";
-
-  console.log("finalValue", finalValue);
-  console.log("currentValue", currentValue);
+  onOperationSelectHandler("/");
 });
