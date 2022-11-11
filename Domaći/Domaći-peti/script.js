@@ -25,4 +25,5 @@ for( var i = 0; i <= loremIpsumText.length -1; i++ ){
     }
   }
 
-  console.log("Tekst sadrži " + charactersInText.length + " slova.")
+  console.log("Tekst sadrži " + charactersInText.length + " slova.");
+  console.log("Slova", charactersInText);
