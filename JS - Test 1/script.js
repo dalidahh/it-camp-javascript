@@ -18,7 +18,7 @@ var indeksi = [];
 // console.log(indeksi); 
 
  for( var i = 0; i <= ar.length -2; i++) {
-     for( var j = i + 1; j <= ar.length -1; j++) {
+     for( var j = 1; j <= ar.length -1; j++) {
         if(((ar[i] + ar[j]) % k ) === 0 ) {
             if( i < j ) {
                indeksi.push(ar[i]);
