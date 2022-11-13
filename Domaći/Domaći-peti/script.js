@@ -20,10 +20,29 @@ console.log ("Rečenice", recenice);
 console.log ("Riječi", rijeci);
 
 for( var i = 0; i <= loremIpsumText.length -1; i++ ){
-    if( loremIpsumText[i]!=="." && loremIpsumText[i]!=="," && loremIpsumText[i]!=="!" && loremIpsumText[i]!==" " && loremIpsumText[i]!=="'"){
+     if( loremIpsumText[i]!=="." && loremIpsumText[i]!=="," && loremIpsumText[i]!=="!" && loremIpsumText[i]!==" " && loremIpsumText[i]!=="'"){
         charactersInText.push(loremIpsumText[i])
     }
   }
 
   console.log("Tekst sadrži " + charactersInText.length + " slova.");
   console.log("Slova", charactersInText);
+
+
+  // var arr = [9, 2, 3, 4, 5, 8, 421, -84, 6];
+  // var indeksi = [];
+
+  // for( var i = 0; i <= arr.length -2; i++) {
+  //   for( var j = 1; j <= arr.length -1; j++) {
+  //     if(arr[i] + arr[j] === 10) {
+  //     indeksi.push(i);
+  //     indeksi.push(j);
+  //     break;
+  //     }
+  //   }
+  //   if (indeksi.length === 2) {
+  //     break;
+  //   }
+  // }
+
+  // console.log(indeksi);

@@ -75,3 +75,4 @@ console.log("Data recenica ima " + recenice.length + " recenica.")
 console.log("Data recenica ima " + rijeci.length + " rijeci.")
 
 var charactersInText = loremIpsumText.split("");
+
