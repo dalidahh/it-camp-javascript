@@ -17,20 +17,23 @@
 
 //  console.log(indeksi);
 
-// Deliver the solution in this format
+/*
+ * Complete the 'divisibleSumPairs' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER k
+ *  3. INTEGER_ARRAY ar
+ */
 
-// ar - array of numbers
-// n - length of ar
-// k - ar[i]+ar[j] should be devided by this number
- 
-function divisibleSumPairs( ar, k, n) {
+function divisibleSumPairs(n, k, ar) {
     var numberOfPairs = 0;
      
-    for( var i = 0; i <= ar.length -1; i++) {
-             for( var j = 0; j <= ar.length -1; j++) {
-                for( var m = 0; m <= ar.length -1; m++ )
-                if((ar[i] + ar[j] + ar[m]) % k === 0 ) {
-                    if( i < j && j < m ) {
+    for( var i = 0; i <= ar.length -2; i++) {
+             for( var j = 1; j <= ar.length -1; j++) {
+                if((ar[i] + ar[j]) % k === 0 ) {
+                    if( i < j ) {
                     numberOfPairs++;
                     }     
                 }
@@ -40,5 +43,24 @@ function divisibleSumPairs( ar, k, n) {
         return numberOfPairs;
 }
 
-var result = divisibleSumPairs([1, 2, 3, 4, 5, 6], 5, 2);
-console.log(result)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+// function divisibleSumPairs( ar, k, n) {
+//     var numberOfPairs = 0;
+     
+//     for( var i = 0; i <= ar.length -1; i++) {
+//              for( var j = 0; j <= ar.length -1; j++) {
+//                 for( var m = 0; m <= ar.length -1; m++ )
+//                 if((ar[i] + ar[j] + ar[m]) % k === 0 ) {
+//                     if( i < j && j < m ) {
+//                     numberOfPairs++;
+//                     }     
+//                 }
+//             }
+//         }     
+     
+//         return numberOfPairs;
+// }
+
+// var result = divisibleSumPairs([1, 2, 3, 4, 5, 6], 5, 2);
+// console.log(result)
