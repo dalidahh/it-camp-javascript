@@ -32,7 +32,7 @@ function divisibleSumPairs(n, k, ar) {
      
     for( var i = 0; i <= ar.length -2; i++) {
              for( var j = 1; j <= ar.length -1; j++) {
-                if((ar[i] + ar[j]) % k === 0 ) {
+                if((ar[i] + ar[j]) % k === 0 ) {         // if(( i < j && ar[i] + ar[j]) % k === 0 )
                     if( i < j ) {
                     numberOfPairs++;
                     }     
@@ -42,6 +42,13 @@ function divisibleSumPairs(n, k, ar) {
      
         return numberOfPairs;
 }
+
+    var result = divisibleSumPairs(1, 2, [1, 2, 3]);
+console.log(result)
+  
+  // ar.lenght - broj elemenata u nizu
+  // ar[1] - element niza ar na indeksu 1
+  // ar[ar.length -1] - vrednost poslednjeg elementa u nizu (length i indeks zadnjeg se razlikuju za jedan)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
